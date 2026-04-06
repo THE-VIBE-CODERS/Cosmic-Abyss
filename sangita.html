@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yash Barnwal | Portfolio</title>
+
+  <style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at center, #050505 0%, #000 100%);
+  color: white;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,255,255,0.08), transparent 70%);
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.portfolio-header {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cosmic-orb {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: white;
+
+  background: radial-gradient(circle at 35% 30%,#0e0c13,#b264df 50%, #1e0a50 80%);
+
+  box-shadow: 0 0 25px rgba(124,58,237,.7),
+              inset 0 0 25px rgba(255,255,255,.08);
+
+  overflow: hidden;
+}
+
+.cosmic-orb::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+
+  background: conic-gradient( from 0deg, transparent 0%, rgba(167,139,250,0.4), transparent 40%, rgba(124,58,237,0.6), transparent 80% );
+
+  animation: spinEnergy 4s linear infinite;
+  filter: blur(6px);
+}
+
+@keyframes spinEnergy {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.cosmic-orb::after {
+  content: "";
+  position: absolute;
+
+  width: 120%;
+  height: 40%;
+
+  border-radius: 50%;
+  border: 1px solid rgba(167,139,250,.5);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(70deg);
+
+  animation: orbitRing 3s linear infinite;
+}
+
+@keyframes orbitRing {
+  from {
+    transform: translate(-50%, -50%) rotateX(70deg) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(70deg) rotate(360deg);
+  }
+}
+
+.portfolio-name {
+  font-size: 48px;
+  margin: 20px 0 10px;
+  letter-spacing: 1px;
+}
+
+.portfolio-tagline {
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+.portfolio-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.portfolio-section {
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(0,255,255,0.15), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.portfolio-section:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,255,255,0.3);
+  box-shadow: 0 10px 40px rgba(0,255,255,0.1);
+}
+
+.portfolio-section:hover::before {
+  opacity: 1;
+}
+
+.portfolio-section h2 {
+  margin-bottom: 12px;
+  font-size: 26px;
+  color: #00ffff;
+}
+
+ul li {
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.back-btn {
+    padding-top: 80px;
+  display: inline-block;
+  margin: 20px 30px;
+  text-decoration: none;
+  color: #00ffff;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  text-shadow: 0 0 10px cyan;
+}
+
+    </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="stars-layer"></div>
+    <nav class="nav">
+    <div class="nav-left">
+      <div class="nav-logo"> <a href="#hero" class="nav-link"><img src="logo.jpeg" alt="logo"></a></div>
+    </div>
+
+    <div class="nav-center">
+      <a href="index.html#about-us" class="nav-link">About</a>
+      <a href="index.html#team-section" class="nav-link">Team</a>
+      <a href="index.html#contact-section" class="nav-link">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-orb"></div>
+    </div>
+  </nav>
+
+  <!-- BACK -->
+  <a href="index.html#team-section" class="back-btn">← Back to Team</a>
+
+  <!-- HEADER -->
+  <section class="portfolio-header">
+    <div class="cosmic-orb">S</div>
+    <h1 class="portfolio-name">Sangita Ray</h1>
+    <p class="portfolio-tagline">
+      Crafts interfaces so smooth they defy friction &amp; physics itself.
+    </p>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="portfolio-content">
+
+    <div class="portfolio-section">
+      <h2>About Me</h2>
+      <p>
+       I’m a student into physics and computer science, especially black holes and cosmology. <br> 
+       I like exploring the universe by combining research with coding.
+      </p>
+    </div>
+
+    <div class="portfolio-section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Frontend Development</li>
+        <li>Game Development (Unity)</li>
+        <li>C / HTML / CSS</li>
+      </ul>
+    </div>
+
+    <div class="portfolio-section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Cosmic Abyss</li>
+        <li>Endless Runner Game</li>
+      </ul>
+    </div>
+
+    <div class="portfolio-section">
+      <h2>Contact</h2>
+      <p>Email: sangitaray1920@email.com</p>
+    </div>
+
+  </section>
+
+</body>
+</html>

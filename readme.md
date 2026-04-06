@@ -19,7 +19,7 @@ COSMIC ABYSS is a fully front-end project designed to simulate a **space-driven 
 * Custom footer with glowing social orbs
 * Fully themed UI using a consistent visual language
 
-Everything is handcrafted using pure HTML + CSS — no frameworks, no shortcuts.
+Everything is handcrafted using pure HTML + CSS -> no frameworks, no shortcuts.
 
 ---
 

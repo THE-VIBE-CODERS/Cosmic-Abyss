@@ -17,6 +17,10 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+
+section{
+  scroll-margin-top: 80px;
+}
 body {
   background: var(--black);
   color: #fff;
@@ -950,8 +954,33 @@ body {
   margin-bottom: 2rem;
 }
 
+.contact-details{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
 .contact-details p {
-  margin-bottom: .5rem;
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+  padding-left: 0.8rem;
+  position: relative;
+}
+
+.contact-details p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--purple-light);
+}
+
+.contact-text, .contact-details{
+  max-width: 420px;
+}
+
+.contact-details li{
+  margin-bottom: 0.5rem;
   color: var(--accent);
 }
 
@@ -968,6 +997,61 @@ body {
   border: 1px solid rgba(167,139,250,0.7);
 
   backdrop-filter: blur(12px);
+}
+
+.contact-info-box{
+  padding: 2rem;
+  border-radius: 20px;
+
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(124, 58, 237, 0.15));
+
+  border: 1px solid rgba(167, 139, 250, 0.3);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.15),
+              inset 0 0 20px rgba(255, 255, 255, 0.03);
+  
+  max-width: 420px;
+}
+
+.contact-info-box:hover{
+  transform: translateY(-6px);
+
+  box-shadow: 0 10px 40px rgba(124, 58, 237, 0.35), 
+              inset 0 0 25px rgba(255, 255, 255, 0.05);
+  
+  border-color: rgba(167, 139, 250, 0.6);
+}
+
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(167,139,250,0.2);
+
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(6px);
+
+  border-color: rgba(167,139,250,0.6);
+
+  box-shadow:
+    0 0 15px rgba(124,58,237,0.4),
+    inset 0 0 10px rgba(255,255,255,0.03);
+}
+
+.icon {
+  font-size: 0.9rem;
+  color: var(--purple-light);
 }
 
 .input-group {
@@ -1046,6 +1130,7 @@ body {
 textarea {
   scrollbar-width: thin;
   scrollbar-color: rgba(124,58,237,0.8) transparent;
+  resize: none;
 }
 
 textarea::-webkit-scrollbar {
